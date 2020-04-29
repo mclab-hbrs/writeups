@@ -162,7 +162,7 @@ In this scheme, Alice chooses a large random number α as private key. Then she 
 
 The scheme is illustrated in this graph (taken from the original publication):
 
-![SIDH](/assets/img/SIDH.png)
+![SIDH](SIDH.png)
 
 ## Static SIDH Attack
 Reusing private keys in Diffie Hellman is a common use case, called static DH. With SIDH however, it is a very bad idea to use non-ephemeral keys.
