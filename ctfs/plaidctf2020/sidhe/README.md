@@ -175,7 +175,7 @@ As you can see in the code, the j-invariant is used as the shared key `return Ei
 So only if alpha is even, the shared key will be equal to the original (legitimate) one. Because of this, we just recovered the lowest bit of Alice's private key. With the same trick we can recover all bits of the private key. For mathematical background information of the attack see this [paper on insecurities of SIDH](https://eprint.iacr.org/2016/859.pdf). To bypass the check via Weil pairing we need to include a scaling factor \theta. However, that is not possible for the highest bits. We therefore have to brute force a hand-ful of bits offline, which is not a problem.
 
 ## Exploit
-The given server code does the computation on E[3^n], so it is actually playing Bob not Alice. However, the Static SIDH attack works exactly the same. The only difference is that we view the server key in trits instead of bits: α= α_0 + α_1*3^1 + \ldots + α_i*3^i. Since a trit can have three possible values instead of two, we need to query the oracle more often per 'position'. An that's all!
+The given server code does the computation on E[3^n], so it is actually playing Bob not Alice. However, the Static SIDH attack works exactly the same. The only difference is that we view the server key in trits instead of bits: α= α_0 + α_1*3^1 + ... + α_i*3^i. Since a trit can have three possible values instead of two, we need to query the oracle more often per 'position'. An that's all!
 
 A full exploit script (by manf since he was faster than me :/) can be found [here](sidhe.py).
  
